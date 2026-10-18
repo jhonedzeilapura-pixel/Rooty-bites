@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rooty Bites | Kamote Crunch</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="brand">
+            <img src="images/Rooty bites logo.jpg" alt="Rooty Bites Logo">
+            
+            <span>Rooty bites</span>
+             </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#checkout">Order</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart
+            <span id="cart-count">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">🌱 KAMOTE CRUNCH</p>
+
+        <h1>
+            Crunchy.
+            <span>Healthy.</span>
+            Affordable.
+        </h1>
+
+        <p class="hero-description">
+            Enjoy delicious and crunchy sweet potato snacks
+            made for every craving. Choose your favorite flavor
+            and enjoy the goodness of Rooty Bites!
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#products" class="primary-button">
+                Shop Now 🛍️
+            </a>
+
+            <a href="#about" class="secondary-button">
+                Learn More
+            </a>
+        </div>
+
+        <div class="hero-features">
+
+            <div>
+                <strong>100%</strong>
+                <small>Kamote</small>
+            </div>
+
+            <div>
+                <strong>₱15</strong>
+                <small>Per Flavor</small>
+            </div>
+
+            <div>
+                <strong>3</strong>
+                <small>Delicious Flavors</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="hero-circle"></div>
+
+        <img src="images/bbq.jpg" alt="Rooty Bites BBQ">
+
+        
+            
+            
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products" class="products-section">
+
+    <div class="section-heading">
+
+        <p>OUR PRODUCTS</p>
+
+        <h2>Choose Your Favorite Flavor</h2>
+
+        <span>
+            One bite and you'll know why Rooty Bites is so good!
+        </span>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- BBQ -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/bbq.jpg" alt=" BBQ Flavor">
+
+                <span class="flavor-tag bbq-tag">
+                    BBQ
+                </span>
+            </div>
+
+            <div class="product-info">
+
+                <h3>BBQ Flavor</h3>
+
+                <p>
+                    Smoky, savory and deliciously crunchy.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₱15</strong>
+
+                    <div class="quantity-box">
+
+                        <button onclick="changeQuantity('bbq', -1)">
+                            −
+                        </button>
+
+                        <span id="qty-bbq">1</span>
+
+                        <button onclick="changeQuantity('bbq', 1)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="add-button"
+                    onclick="addToCart('bbq')">
+
+                    🛒 Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHEESE -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img src="images/cheese.jpg" alt="Cheese Flavor">
+
+                <span class="flavor-tag cheese-tag">
+                    CHEESE
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Cheese Flavor</h3>
+
+                <p>
+                    Cheesy, crunchy and full of flavor.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₱15</strong>
+
+                    <div class="quantity-box">
+
+                        <button onclick="changeQuantity('cheese', -1)">
+                            −
+                        </button>
+
+                        <span id="qty-cheese">1</span>
+
+                        <button onclick="changeQuantity('cheese', 1)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="add-button"
+                    onclick="addToCart('cheese')">
+
+                    🛒 Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SOUR CREAM -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img src="images/sour-cream.jpg" alt="Sour Cream Flavor">
+
+                <span class="flavor-tag sour-tag">
+                    SOUR CREAM
+                </span>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Sour Cream</h3>
+
+                <p>
+                    Creamy, tangy and irresistibly crunchy.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>₱15</strong>
+
+                    <div class="quantity-box">
+
+                        <button onclick="changeQuantity('sour', -1)">
+                            −
+                        </button>
+
+                        <span id="qty-sour">1</span>
+
+                        <button onclick="changeQuantity('sour', 1)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="add-button"
+                    onclick="addToCart('sour')">
+
+                    🛒 Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about-section">
+
+    <div class="about-image">
+
+        <img src="images/Rooty bites logo.jpg" alt="Rooty Bites">
+         
+    </div>
+
+    <div class="about-content">
+
+        <p class="section-label">
+            ABOUT ROOTY BITES
+        </p>
+
+        <h2>
+            Crunchy, Healthy and Affordable!
+        </h2>
+
+        <p>
+            Rooty Bites is a sweet potato snack business
+            created to provide delicious, affordable and
+            satisfying snacks for students and the community.
+        </p>
+
+        <p>
+            Made from sweet potatoes and available in
+            BBQ, Cheese and Sour Cream flavors,
+            Rooty Bites gives you a tasty snack for only
+            <strong>₱15 per flavor.</strong>
+        </p>
+
+        <div class="motto">
+            “Mapapa Utoch Ka Sa Sarap!” 😋
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<section id="checkout" class="checkout-section">
+
+    <div class="section-heading">
+
+        <p>ORDER NOW</p>
+
+        <h2>Complete Your Order</h2>
+
+        <span>
+            Fill out the form below to place your order.
+        </span>
+
+    </div>
+
+
+    <div class="checkout-container">
+
+
+        <!-- ORDER FORM -->
+
+        <div class="order-form">
+
+            <h3>Customer Information</h3>
+
+            <form id="orderForm">
+
+                <label>
+                    Customer Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>
+                    Contact Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="contactNumber"
+                    placeholder=""
+                    required
+                >
+
+
+                <label>
+                    Order Option
+                </label>
+
+                <select id="orderOption" required>
+
+                    <option value="">
+                        Select option
+                    </option>
+
+                    <option value="Pickup">
+                        Pickup
+                    </option>
+
+                    <option value="Delivery">
+                        Delivery
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Address
+                </label>
+
+                <textarea
+                    id="address"
+                    placeholder="Enter your address"
+                    rows="4"
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="place-order-button">
+
+                    🛍️ Place Order
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ORDER SUMMARY -->
+
+        <div class="checkout-summary">
+
+            <h3>Your Order</h3>
+
+            <div id="checkout-items">
+
+                <p class="empty-message">
+                    Your cart is empty.
+                </p>
+
+            </div>
+
+            <div class="summary-total">
+
+                <span>Total</span>
+
+                <strong id="checkout-total">
+                    ₱0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CART SIDEBAR ================= -->
+
+<div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+
+
+<aside id="cart-sidebar" class="cart-sidebar">
+
+    <div class="cart-header">
+
+        <h2>🛒 Your Cart</h2>
+
+        <button onclick="closeCart()">
+            ✕
+        </button>
+        <button onclick="addToCart('BBQ',15,'images/bbq.jpg')"
+        Add to cart
+        </button>
+    </div>
+
+
+    <div id="cart-items" class="cart-items">
+
+        <p class="empty-message">
+            Your cart is empty.
+        </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>Total</span>
+
+            <strong id="cart-total">
+                ₱0
+            </strong>
+
+        </div>
+
+        <button
+            class="checkout-button"
+            onclick="goToCheckout()">
+
+            Proceed to Checkout
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= ORDER SUCCESS ================= -->
+
+<div id="success-modal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>Order Received!</h2>
+
+        <p id="success-message"></p>
+
+        <button
+            onclick="closeSuccess()"
+            class="primary-button">
+
+            Done
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <img src="images/Rooty bites logo.jpg" alt="Rooty Bites">
+        
+         
+        
+        
+
+        <h2>Rooty Bites</h2>
+
+    </div>
+
+    <p>
+        Crunchy. Healthy. Affordable.
+    </p>
+
+    <p class="copyright">
+        © 2026 Rooty Bites. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
