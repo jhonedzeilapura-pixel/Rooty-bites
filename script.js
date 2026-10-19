@@ -6,21 +6,21 @@ const products = {
         id: "bbq",
         name: "BBQ Flavor",
         price: 15,
-        image: "images/bbq.jpg"
+        image: "Bbq.jpg"
     },
 
     cheese: {
         id: "cheese",
         name: "Cheese Flavor",
         price: 15,
-        image: "images/cheese.jpg"
+        image: "Cheese.jpg"
     },
 
     sour: {
         id: "sour",
         name: "Sour Cream",
         price: 15,
-        image: "images/sour-cream.jpg"
+        image: "Sour-cream.jpg"
     }
 
 };
